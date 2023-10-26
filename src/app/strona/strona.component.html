@@ -1,0 +1,186 @@
+<!--
+<div class="ebook-container">
+  <div class="page" *ngFor="let page of pages; let i = index" [class.active]="i === currentPage">
+    <div class="content">
+      <div class="left-area" (click)="scrollback()">
+        <a style="position: absolute; top: 300px; color: white; left: 10px;"><</a>
+      </div>
+      <div style="align-items: center; display: flex;"> </div>
+      <img
+        *ngIf="currentPage == 2"
+        class="page-image"
+        src="./assets/mapa_1.jpg"
+        alt="Mapa"
+        width="400"
+        height="500"
+      >
+      <div class="right-area" (click)="scrollNext()">
+        <a style="position: absolute; top: 300px; color: white; right: 10px;">></a>
+      </div>
+    </div>
+  </div>
+</div>
+-->
+
+<div class="background-image">
+
+
+
+<div style="padding-top: 4%;">
+  <div class="glowny"  style="margin-left: 1%;   width: 55%; height: 73vh; z-index: 1;">
+    <div class="card17" [class.rotated16]="isCardRotated16" (click)="rotateCard16()">
+      <div class="card-side front" >
+        <img class="page-image1" src="./assets/str_2.jpg" alt="Mapa" width="29%" height="auto">
+      </div>
+      <div class="card-side back" >
+        <img   class="page-image1_Ok2" src="./assets/Okladka_cz2.jpg" alt="Mapa" width="29%" height="auto">
+        <img [ngClass]="{'Okladka-1': Okladka == 1}" [ngClass]="{'Okladka-2': Okladka == 2}" class="page-image1_Ok1" src="./assets/okladka_przod.jpg" alt="Mapa" width="29%" height="auto">
+      </div>
+    </div>
+  
+    <div class="card"  [class.rotated]="isCardRotated" (click)="rotateCard()">
+      <div class="card-side front" >
+        <img class="page-image1" src="./assets/str_4.jpg" alt="Mapa" width="29%" height="auto">
+
+      </div>
+      <div class="card-side back">
+        <img class="page-image1" src="./assets/str_3.jpg" alt="Mapa" width="29%" height="auto">
+      </div>
+    </div>
+    <div class="card1"  [class.rotated1]="isCardRotated1" (click)="rotateCard1()">
+      <div class="card-side front" >
+        <img class="page-image1" src="./assets/str_6.jpg" alt="Mapa" width="29%" height="auto">
+        
+      </div>
+      <div class="card-side back">
+        <img class="page-image1" src="./assets/str_5.jpg" alt="Mapa" width="29%" height="auto">
+      </div>
+    </div>
+    <div class="card2"  [class.rotated2]="isCardRotated2" (click)="rotateCard2()">
+      <div class="card-side front" >
+        <img class="page-image1" src="./assets/str_8.jpg" alt="Mapa" width="29%" height="auto">
+      </div>
+      <div class="card-side back">
+        <img class="page-image1" src="./assets/str_7.jpg" alt="Mapa" width="29%" height="auto">
+      </div>
+    </div>
+    <div class="card3"  [class.rotated5]="isCardRotated5" (click)="rotateCard5()">
+      <div class="card-side front" >
+        <img class="page-image1" src="./assets/str_10.jpg" alt="Mapa" width="29%" height="auto">
+      </div>
+      <div class="card-side back">
+        <img class="page-image1" src="./assets/str_9.jpg" alt="Mapa" width="29%" height="auto">
+      </div>
+    </div>
+    <div class="card4"  [class.rotated6]="isCardRotated6" (click)="rotateCard6()">
+      <div class="card-side front" >
+        <img class="page-image1" src="./assets/str_12.jpg" alt="Mapa" width="29%" height="auto">
+      </div>
+      <div class="card-side back">
+        <img class="page-image1" src="./assets/str_11.jpg" alt="Mapa" width="29%" height="auto">
+      </div>
+    </div>
+    <div class="card5"  [class.rotated7]="isCardRotated7" (click)="rotateCard7()">
+      <div class="card-side front" >
+        <img class="page-image1" src="./assets/str_14.jpg" alt="Mapa" width="29%" height="auto">
+      </div>
+      <div class="card-side back" >
+        <img class="page-image1" src="./assets/str_13.jpg" alt="Mapa" width="29%" height="auto">
+      </div>
+    </div>
+    <div class="card6"  [class.rotated8]="isCardRotated8" (click)="rotateCard8()">
+      <div class="card-side front" >
+        <img class="page-image1" src="./assets/str_16.jpg" alt="Mapa" width="29%" height="auto">
+      </div>
+      <div class="card-side back">
+        <img class="page-image1" src="./assets/str_15.jpg" alt="Mapa" width="29%" height="auto">
+      </div>
+    </div>
+    <div class="card7"   [class.rotated9]="isCardRotated9" (click)="rotateCard9()">
+      <div class="card-side front" >
+        <img class="page-image1" src="./assets/str_18.jpg" alt="Mapa" width="29%" height="auto">
+      </div>
+      <div class="card-side back">
+        <img  class="page-image1" src="./assets/str_17.jpg" alt="Mapa" width="29%" height="auto">
+        <img [ngClass]="{'visible-2': visibility == 2}" class="page-image12" src="./assets/Pusta_obr.jpg" alt="Mapa" width="29%" height="auto">
+        <img  class="QR" [ngClass]="{'visible-2': visibility == 2}" [ngClass]="{'visibleQR-2': visibilityQR == 2}" [ngClass]="{'visibleQR-1': visibilityQR == 1}" src="./assets/QR.png" alt="Mapa" width="29%" height="auto" >
+
+        <div style="width: 120px; height: 120px; background-color: black; position: absolute; color: black; z-index: 3; top:39%; left: 48%; opacity: 0;" (mouseenter)="ChangeVisibility()"></div>
+        <div class="Naceluj" [ngClass]="{'visible-2': visibility == 2}" style="width: 35px; height: 35px;  position: absolute; color: black; background-color: black; z-index: 3; top: 10%; left: 10%; opacity: 0;" (mouseenter)="Pow()" (mouseout)="Pow1()">
+        </div>
+      </div>
+    </div>
+    <div class="card8"  [class.rotated10]="isCardRotated10" (click)="rotateCard10()">
+      <div class="card-side front" >
+        <img class="page-image1" src="./assets/str_20.jpg" alt="Mapa" width="29%" height="auto">
+      </div>
+      <div class="card-side back">
+        <img class="page-image1" src="./assets/str_19.jpg" alt="Mapa" width="29%" height="auto">
+      </div>
+    </div>
+    <div class="card9"  [class.rotated11]="isCardRotated11" (click)="rotateCard11()">
+      <div class="card-side front" >
+        <img class="page-image1" src="./assets/str_22.jpg" alt="Mapa" width="29%" height="auto">
+      </div>
+      <div class="card-side back">
+        <img class="page-image1" src="./assets/str_21.jpg" alt="Mapa" width="29%" height="auto">
+      </div>
+    </div>
+    <div class="card10"  [class.rotated12]="isCardRotated12" (click)="rotateCard12()">
+      <div class="card-side front" >
+        <img class="page-image1" src="./assets/str_24.jpg" alt="Mapa" width="29%" height="auto">
+      </div>
+      <div class="card-side back">
+        <img class="page-image1" src="./assets/str_23.jpg" alt="Mapa" width="29%" height="auto">
+      </div>
+    </div>
+    <div class="card11"  [class.rotated13]="isCardRotated13" (click)="rotateCard13()">
+      <div class="card-side front" >
+        <img class="page-image1" src="./assets/str_26.jpg" alt="Mapa" width="29%" height="auto">
+      </div>
+      <div class="card-side back">
+        <img class="page-image1" src="./assets/str_25.jpg" alt="Mapa" width="29%" height="auto">
+      </div>
+    </div>
+    <div class="card12"  [class.rotated14]="isCardRotated14" (click)="rotateCard14()">
+      <div class="card-side front" >
+        <img class="page-image1" src="./assets/str_28.jpg" alt="Mapa" width="29%" height="auto">
+      </div>
+      <div class="card-side back">
+        <img class="page-image1" src="./assets/str_27.jpg" alt="Mapa" width="29%" height="auto">
+      </div>
+    </div>
+    <div class="card13"   [class.rotated15]="isCardRotated15" (click)="rotateCard15()">
+      <div class="card-side front"  >
+        <img class="page-image1" src="./assets/str_30.jpg" alt="Mapa" width="29%" height="auto">
+      </div>
+      <div class="card-side back">
+        <img class="page-image1" src="./assets/str_29.jpg" alt="Mapa" width="29%" height="auto">
+      </div>
+    </div>
+    <div class="card14"  [class.rotated20]="isCardRotated20" (click)="rotateCard20()">
+      <div class="card-side front" >
+        <img class="page-image1" src="./assets/Okadka_tyl.jpg" alt="Mapa" width="29%" height="auto">
+      </div>
+      <div class="card-side back1">
+        <img class="page-last1" src="./assets/podw1.jpg" alt="Mapa" width="29%" height="auto">
+        <div style="width: 30px; height: 20%; background-color: black; position: absolute; color: black; z-index: 3; top:0%; left: 93%; opacity: 0;" (mouseenter)="VisibilityLast()" ></div>
+        <div style="width: 30px; height: 20%; background-color: black; position: absolute; color: black; z-index: 3; top:50%; left: 93%; opacity: 0;" ></div>
+        <img class="page-last" [ngClass]="{'visiblelast-2': visibilitylast == 2} " [ngClass]="{'visiblelast-1': visibilitylast == 1} "style=" transform: rotateY(90deg); transform-origin: right;" src="./assets/podw2.jpg" alt="Mapa" width="29%" height="auto">
+        
+      </div>
+    </div>
+  </div>
+
+</div>
+<div class="Kolejne_czesci" style="width: 30%; z-index: 6; right: 3%; top: 13%; position: absolute; border: solid 12px; padding: 3px; background-color: rgb(218, 167, 0);" [class.rotated3]="isCardRotated3">
+  <img class="grzbiet-img1" src="./assets/grzbiet_1.jpg" alt="Mapa" (click)="Zmiana()" >
+  <img class="grzbiet-img2" src="./assets/grzbiet_2.jpg" alt="Mapa" (click)="Zmiana1()">
+  <img class="grzbiet-img3" src="./assets/grzbiet_3.jpg" alt="Mapa" >
+  <img class="grzbiet-img4" src="./assets/grzbiet_4.jpg" alt="Mapa" >
+  <img class="grzbiet-img5" src="./assets/grzbiet_5_rgb.jpg" alt="Mapa" >
+  <img class="grzbiet-img6" src="./assets/grzbiet_6.jpg" alt="Mapa" >
+
+  
+</div>
+</div>
