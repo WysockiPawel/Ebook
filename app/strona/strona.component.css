@@ -666,6 +666,22 @@ animation-fill-mode: forwards;
     top: 10%;
 
   }
+  .QR1 {
+    width: 5%; 
+    height: 5%; 
+    z-index: 2;
+    position: absolute;
+    opacity: 0;
+    left: 10%;
+    top: 10%;
+
+  }
+  .QR1.visible-2 {
+    animation-name: QRPoka;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+
+  }
   .QR.visible-2 {
     animation-name: QRPoka;
     animation-duration: 2s;

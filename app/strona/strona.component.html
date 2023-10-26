@@ -34,10 +34,7 @@
       </div>
       <div class="card-side back" >
         <img   class="page-image1_Ok2" src="./assets/Okladka_cz2.jpg" alt="Mapa" width="29%" height="auto">
-        <img [ngClass]="{
-          'Okladka-1': Okladka === 1,
-          'Okladka-2': Okladka === 2
-        }" class="page-image1_Ok1" src="./assets/okladka_przod.jpg" alt="Mapa" width="29%" height="auto">
+        <img [ngClass]="{'Okladka-1': Okladka === 1, 'Okladka-2': Okladka === 2}" class="page-image1_Ok1" src="./assets/okladka_przod.jpg" alt="Mapa" width="29%" height="auto">
       </div>
     </div>
   
@@ -106,8 +103,8 @@
       <div class="card-side back">
         <img  class="page-image1" src="./assets/str_17.jpg" alt="Mapa" width="29%" height="auto">
         <img [ngClass]="{'visible-2': visibility == 2}" class="page-image12" src="./assets/Pusta_obr.jpg" alt="Mapa" width="29%" height="auto">
-        <img  class="QR" [ngClass]="{'visible-2': visibility == 2}" [ngClass]="{'visibleQR-2': visibilityQR == 2}" [ngClass]="{'visibleQR-1': visibilityQR == 1}" src="./assets/QR.png" alt="Mapa" width="29%" height="auto" >
-
+        <img  class="QR" [ngClass]="{'visible-2': visibility == 2, 'visibleQR-2': visibilityQR == 2, 'visibleQR-1': visibilityQR == 1}"  src="./assets/QR.png" alt="Mapa" width="29%" height="auto" >
+        <img  class="QR1" [ngClass]="{'visible-2': visibility == 2}"  src="./assets/QR.png"  alt="Mapa" width="29%" height="auto" >
         <div style="width: 120px; height: 120px; background-color: black; position: absolute; color: black; z-index: 3; top:39%; left: 48%; opacity: 0;" (mouseenter)="ChangeVisibility()"></div>
         <div class="Naceluj" [ngClass]="{'visible-2': visibility == 2}" style="width: 35px; height: 35px;  position: absolute; color: black; background-color: black; z-index: 3; top: 10%; left: 10%; opacity: 0;" (mouseenter)="Pow()" (mouseout)="Pow1()">
         </div>
@@ -169,7 +166,7 @@
         <img class="page-last1" src="./assets/podw1.jpg" alt="Mapa" width="29%" height="auto">
         <div style="width: 30px; height: 20%; background-color: black; position: absolute; color: black; z-index: 3; top:0%; left: 93%; opacity: 0;" (mouseenter)="VisibilityLast()" ></div>
         <div style="width: 30px; height: 20%; background-color: black; position: absolute; color: black; z-index: 3; top:50%; left: 93%; opacity: 0;" ></div>
-        <img class="page-last" [ngClass]="{'visiblelast-2': visibilitylast == 2} " [ngClass]="{'visiblelast-1': visibilitylast == 1} "style=" transform: rotateY(90deg); transform-origin: right;" src="./assets/podw2.jpg" alt="Mapa" width="29%" height="auto">
+        <img class="page-last" [ngClass]="{'visiblelast-2': visibilitylast == 2, 'visiblelast-1': visibilitylast == 1}"style=" transform: rotateY(90deg); transform-origin: right;" src="./assets/podw2.jpg" alt="Mapa" width="29%" height="auto">
         
       </div>
     </div>
