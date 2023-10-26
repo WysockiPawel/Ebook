@@ -611,11 +611,27 @@ animation-fill-mode: forwards;
     z-index: 2;
     position: absolute;
   }
+  .page-last2 {
+    width: 100%; 
+    height: 100%; 
+    z-index: 2;
+    position: absolute;
+  }
   .page-last1 {
     width: 100%; 
     height: 100%; 
     z-index: 2;
     position: absolute;
+  }
+  .page-last21.visiblelast-2_1 {
+    animation-name: obrot_1;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+  }
+  .page-last1.visiblelast-1_1 {
+    animation-name: obrot1_1;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
   }
   .page-last.visiblelast-2 {
     animation-name: obrot;
@@ -624,9 +640,11 @@ animation-fill-mode: forwards;
   }
   .page-last.visiblelast-1 {
     animation-name: obrot1;
-    animation-duration: 1s;
+    animation-duration: 2s;
     animation-fill-mode: forwards;
   }
+
+
   @keyframes obrot {
     from{
       transform: rotateY(90deg);
@@ -648,6 +666,45 @@ animation-fill-mode: forwards;
       transform: rotateY(90deg);
       transform-origin: right;
     }
+  }
+  @keyframes obrot_1 {
+    from{
+        transform: rotateY(90deg);
+        
+        transform-origin: left;
+    }
+    to {
+      transform: rotateY(0deg);
+      transform-origin: left;
+    }
+  }
+  @keyframes obrot1_1 {
+    from{
+opacity: 0;
+    }
+    to {
+opacity:1; 
+    }
+  }
+  .QR2.visiblelast-2 {
+    animation-name: QRPoka;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+  }
+  .QR3.visiblelast-2 {
+    animation-name: QRPoka;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+  }
+  .QR2.visibleQR-4 {
+    animation-name: QRwiekszy1;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+  }
+  .QR2.visibleQR-3 {
+    animation-name: QRmniejszy1;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
   }
 
   .page-image12.visible-2 {
@@ -673,6 +730,26 @@ animation-fill-mode: forwards;
     position: absolute;
     opacity: 0;
     left: 10%;
+    top: 10%;
+
+  }
+  .QR2 {
+    width: 5%; 
+    height: 5%; 
+    z-index: 2;
+    position: absolute;
+    opacity: 0;
+    left: 103%;
+    top: 10%;
+
+  }
+  .QR3 {
+    width: 5%; 
+    height: 5%; 
+    z-index: 2;
+    position: absolute;
+    opacity: 0;
+    left: 103%;
     top: 10%;
 
   }
@@ -730,6 +807,38 @@ animation-fill-mode: forwards;
       opacity: 1;
       transform: scale(1);
       left: 10%;
+      top: 10%;
+    }
+  }
+  @keyframes QRwiekszy1 {
+    from {
+      opacity: 1;
+      transform: scale(1);
+      left: 103%;
+      top: 10%;
+
+    }
+    to {
+      transform: scale(4);
+      left: 133%;
+      top: 10%;
+      opacity: 1;
+    }
+  }
+  @keyframes QRmniejszy1 {
+    from {
+
+      transform: scale(4);
+      left: 133%;
+      top: 10%;
+      opacity: 1;
+
+    }
+    to {
+
+      opacity: 1;
+      transform: scale(1);
+      left: 103%;
       top: 10%;
     }
   }

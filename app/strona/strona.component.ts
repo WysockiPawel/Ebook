@@ -100,6 +100,10 @@ export class StronaComponent {
   isAnimationActive!: boolean;
   visibilityQR: number = 0;
   Okladka: number =  0;
+  visibilitylast1: number = 0;
+  isChanging: boolean = false;
+  isChanging1: boolean = false;
+  visibilityQR1: number = 0;
   
   Zmiana() {
       this.Okladka = 1;
@@ -115,7 +119,7 @@ export class StronaComponent {
     this.visibility = 2;
     console.log('pyklo', this.visibility);
   }
-  isChanging: boolean = false;
+
 
   VisibilityLast() {
     if (this.isChanging) {
@@ -134,7 +138,17 @@ export class StronaComponent {
   
     setTimeout(() => {
       this.isChanging = false; 
-    }, 3000);
+    }, 2500);
+  }
+  VisibilityLast1() {
+
+
+      this.visibilitylast1 = 1;
+
+  
+    setTimeout(() => {
+      this.visibilitylast = 2;
+    }, 1000);
   }
   VisibilityLast2() {
     this.visibilitylast = 1;
@@ -146,6 +160,14 @@ export class StronaComponent {
   }
   Pow1() {
     this.visibilityQR = 1; 
+
+  }
+  Pow2() {
+    this.visibilityQR1 = 2;
+
+  }
+  Pow3() {
+    this.visibilityQR1 = 1; 
 
   }
   
@@ -226,6 +248,8 @@ export class StronaComponent {
   rotateCard15() {
     this.isCardRotated15 = !this.isCardRotated15;
     this.visibilitylast = 0;
+    
+    this.visibilitylast1 = 0;
   }
   rotateCard16() {
     this.isCardRotated16 = !this.isCardRotated16;
@@ -236,7 +260,13 @@ export class StronaComponent {
   }
   rotateCard20() {
     this.isCardRotated20 = !this.isCardRotated20;
-    this.visibilitylast = 0;
+
+    setTimeout(() => {
+      this.visibilitylast = 0;
+    
+      this.visibilitylast1 = 0;
+      this.visibilityQR1 = 0;
+    }, 200);
   }
   rotateCard22() {
     this.isCardRotated22 = !this.isCardRotated22;

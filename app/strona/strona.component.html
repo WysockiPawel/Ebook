@@ -163,11 +163,16 @@
         <img class="page-image1" src="./assets/Okadka_tyl.jpg" alt="Mapa" width="29%" height="auto">
       </div>
       <div class="card-side back1">
-        <img class="page-last1" src="./assets/podw1.jpg" alt="Mapa" width="29%" height="auto">
-        <div style="width: 30px; height: 20%; background-color: black; position: absolute; color: black; z-index: 3; top:0%; left: 93%; opacity: 0;" (mouseenter)="VisibilityLast()" ></div>
-        <div style="width: 30px; height: 20%; background-color: black; position: absolute; color: black; z-index: 3; top:50%; left: 93%; opacity: 0;" ></div>
+        <img class="page-last2"  src="./assets/bialas.jpg" alt="Mapa" width="29%" height="auto">
+        <img class="page-image1" src="./assets/str_wyc.jpg" alt="Mapa" width="29%" height="auto"  >
+        <img class="page-last1" style=" opacity:0;" [ngClass]="{'visiblelast-2_1': visibilitylast1 == 2, 'visiblelast-1_1': visibilitylast1 == 1}" src="./assets/podw1.jpg" alt="Mapa" width="29%" height="auto">
+        <div style="width: 130px; height: 100px; background-color: black; position: absolute; color: black; z-index: 3; top:18%; left: 55%; opacity: 0;" (mouseenter)="VisibilityLast1()"  ></div>
+        <div style="width: 30px; height: 20%; background-color: black; position: absolute; color: black; z-index: 3; top:0%; left: 93%; opacity: 0;"   ></div>
+
+
         <img class="page-last" [ngClass]="{'visiblelast-2': visibilitylast == 2, 'visiblelast-1': visibilitylast == 1}"style=" transform: rotateY(90deg); transform-origin: right;" src="./assets/podw2.jpg" alt="Mapa" width="29%" height="auto">
-        
+        <img  class="QR2" [ngClass]="{'visiblelast-2': visibilitylast == 2, 'visibleQR-4': visibilityQR1 == 2, 'visibleQR-3': visibilityQR1 == 1}"  src="./assets/QR2.png" alt="Mapa" width="29%" height="auto" >
+        <img  class="QR3" [ngClass]="{'visiblelast-2': visibilitylast == 2}"  src="./assets/QR2.png"  alt="Mapa" width="29%" height="auto" (mouseenter)="Pow2()" (mouseout)="Pow3()">
       </div>
     </div>
   </div>
